@@ -1,0 +1,26 @@
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  /* changes root font size to 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* re-adjusts font-size back to 16px */
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,20 @@
+@use "./variables" as *;
+
+@mixin media-tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+//try make a flex mixin
+@mixin flex($direction: row, $justify: space-between) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+}
