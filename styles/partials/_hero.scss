@@ -1,2 +1,21 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+.hero {
+  width: 100%;
+  position: relative;
+  @include flex(column, center);
+  align-items: center;
+  background-color: black;
+
+  &__title,
+  &__text {
+    text-align: center;
+    color: white;
+    margin: 1rem auto;
+    padding: 0 1rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

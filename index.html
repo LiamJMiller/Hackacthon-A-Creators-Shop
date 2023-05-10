@@ -5,20 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Creators Shop - MDM</title>
-    <link rel="stylesheet" href="./styles/home.scss" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <script src="index.js"></script>
   </head>
   <body>
     <header>
       <nav class="nav__background">
         <div class="nav">
-          <a class="nav__img" href="./index.html">
-            <img src="./assets/logos/logo.jpg" alt="Mr Deadman Makes Logo" />
+          <a href="./index.html">
+            <img
+              class="nav__img"
+              src="./assets/logos/logo.jpg"
+              alt="Mr Deadman Makes Logo"
+            />
           </a>
           <ul class="nav__list">
-            <li class="nav__item nav__link--active">
-              <a class="nav__link" href="./index.html">home</a>
+            <li class="nav__item">
+              <a class="nav__link" href="/">Home</a>
             </li>
-            <li class="nav__item nav__link--active">
+            <li class="nav__item">
+              <a class="nav__link" href="/">Gallery</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="/">Shop</a>
+            </li>
+            <li class="nav__item">
+              <input
+                class="nav__item--search"
+                type="text"
+                placeholder="Search.."
+              />
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <section class="hero">
+        <h1 class="hero__title">A Creators Shop</h1>
+        <p class="hero__text">
+          A shop, gallery and portfolio page for creators of all kinds, Where
+          they can sell choiced products and then also sell a service if they
+          choose to do so.
+        </p>
+      </section>
+    </header>
+    <main>
+      <nav class="nav__background">
+        <div class="nav">
+          <a href="./index.html"> </a>
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" href="#about">About</a>
+            </li>
+            <li class="nav__item">
               <a class="nav__link" href="#gallery">Gallery</a>
             </li>
             <li class="nav__item">
@@ -34,12 +72,126 @@
           alt="Mr Deadman Makes Banner"
         />
       </section>
-    </header>
-    <main>
-      <section id="gallery">
-        <h2>Gallery</h2>
+      <section class="about">
+        <h2 id="about" class="about__title">About</h2>
+        <article class="about__card">
+          <p>
+            This is my personal page on A Creators Shop.
+            <br />
+            This section would describe my origin, skills and hopes for the
+            future
+          </p>
+        </article>
+        <article class="about__card">
+          <h3 class="about__heading-sub">Origin</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            commodo nec orci sed finibus. Fusce vitae commodo justo. Fusce
+            facilisis pulvinar erat in fermentum. Sed lobortis sem egestas augue
+            consequat interdum. Suspendisse potenti. Integer vel orci libero.
+            Proin vitae bibendum lacus. Etiam quis magna leo. Quisque at dictum
+            ipsum, nec pulvinar risus. Mauris luctus condimentum lacus eu
+            semper. Ut tempus risus turpis, eu semper magna elementum eget.
+            Suspendisse lacinia massa et elit eleifend, eget faucibus lorem
+            sollicitudin. Cras sollicitudin diam nulla, vitae iaculis justo
+            mollis et. Vestibulum auctor lorem quis ex luctus, at condimentum
+            est posuere.
+          </p>
+        </article>
+        <article class="about__card">
+          <h3 class="about__heading-sub">Skills</h3>
+          <p>
+            Aliquam laoreet euismod diam, non eleifend tellus. Aenean quis
+            imperdiet metus. Aenean fringilla, velit at elementum imperdiet,
+            nunc erat porttitor eros, non dapibus libero mauris ut ante. Nunc
+            hendrerit finibus laoreet. Integer at interdum nibh. Integer sit
+            amet quam congue est efficitur pellentesque. Nunc vel rhoncus lacus.
+            Aenean tristique ante vel viverra mattis. Donec et arcu condimentum,
+            rutrum nisl quis, consequat nunc. Integer pellentesque quis mauris
+            et fringilla. Nunc porta arcu erat, eu porttitor libero dictum ac.
+          </p>
+        </article>
+        <article class="about__card">
+          <h3 class="about__heading-sub">Hopes / future progression</h3>
+          <p>
+            Aliquam mollis massa a metus condimentum, ut commodo purus ornare.
+            Etiam commodo dictum lorem, a hendrerit elit maximus ut. Nam ut odio
+            imperdiet, convallis leo eget, efficitur ipsum. Donec vel lorem
+            scelerisque, fringilla metus a, consectetur mauris. Nunc ut elit sed
+            tellus auctor ultrices in sit amet risus. Nullam auctor venenatis
+            eros, quis ultricies ligula porttitor porta. Vivamus convallis,
+            ipsum non accumsan sollicitudin, metus nisi tincidunt ante, et
+            rhoncus augue elit vel nunc. Vivamus fermentum ac odio at vulputate.
+            Nullam ut venenatis libero. Nulla erat massa, placerat vitae dolor
+            ut, fringilla viverra metus. Donec fermentum aliquet rutrum. Donec
+            ornare risus sed justo tristique, nec ullamcorper nibh consequat.
+          </p>
+        </article>
       </section>
-      <section id="shop"><h2>Shop</h2></section>
+
+      <section id="gallery" class="gallery">
+        <h2 class="gallery__title">Gallery</h2>
+        <!-- <div class="slider">
+          <div class="slider__imgs">
+            <img class="slider__img" src="./assets/images/img1.jpg" />
+          </div>
+        </div> -->
+        <ul class="gallery__list">
+          <li class="gallery__list-item">
+            <img
+              class="gallery__img"
+              src="./assets/images/img1.jpg"
+              alt="Big penguin"
+            />
+          </li>
+          <li class="gallery__list-item">
+            <img
+              class="gallery__img"
+              src="./assets/images/img2.jpg"
+              alt="Border Colly"
+            />
+          </li>
+          <li class="gallery__list-item">
+            <img
+              class="gallery__img"
+              src="./assets/images/img3.jpg"
+              alt="big chicken and small chicken"
+            />
+          </li>
+        </ul>
+      </section>
+      <section id="shop">
+        <h2 class="shop__title">Shop</h2>
+        <div class="shop__area">
+          <article class="product">
+            <img class="product__img" src="./assets/images/img11.jpg" alt="" />
+            <div class="product__text-area">
+              <h3 class="product__title"></h3>
+              <p class="product__quantity"></p>
+              <p class="product__price"></p>
+              <button class="product__button">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product">
+            <img class="product__img" src="./assets/images/img15.jpg" alt="" />
+            <div class="product__text-area">
+              <h3 class="product__title"></h3>
+              <p class="product__quantity"></p>
+              <p class="product__price"></p>
+              <button class="product__button">Add to Cart</button>
+            </div>
+          </article>
+          <article class="product">
+            <img class="product__img" src="./assets/images/img23.jpg" alt="" />
+            <div class="product__text-area">
+              <h3 class="product__title"></h3>
+              <p class="product__quantity"></p>
+              <p class="product__price"></p>
+              <button class="product__button">Add to Cart</button>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
     <footer>
       <p>Contact</p>

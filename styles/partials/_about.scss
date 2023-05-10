@@ -1,0 +1,58 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.about {
+  position: relative;
+  padding: 1rem 0.5rem;
+
+  @include media-tablet {
+    padding: 2rem;
+    width: $tablet-breakpoint;
+    margin: 0 auto;
+    @include flex(column, center);
+  }
+
+  @include media-desktop {
+    width: $tablet-breakpoint;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  &__title {
+    text-decoration: underline;
+
+    @include media-desktop {
+      font-size: 3rem;
+      width: $tablet-breakpoint;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    @include media-tablet {
+      width: 85%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__heading-sub {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+  }
+
+  &__content {
+    @include media-tablet {
+      width: 85%;
+    }
+  }
+
+  &__card {
+    margin: 0;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 150%;
+  }
+}
