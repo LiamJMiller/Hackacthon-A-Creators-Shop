@@ -21,12 +21,11 @@
 // }
 
 .gallery {
-  padding: 1rem;
   background-color: rgb(230, 253, 255);
   @include flex(column);
 
   @include media-tablet {
-    padding: 2rem;
+    padding: 1rem;
     width: $tablet-breakpoint;
     margin: 0 auto;
   }
@@ -42,8 +41,8 @@
 
   &__title {
     text-decoration: underline;
-    margin: 0 1rem;
     padding: 1rem;
+    margin: 0;
 
     @include media-desktop {
       font-size: 3rem;

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Creators Shop - MDM</title>
     <link rel="stylesheet" href="./css/home.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
+
   </head>
   <body>
     <header>
@@ -15,8 +16,8 @@
           <a href="./index.html">
             <img
               class="nav__img"
-              src="./assets/logos/logo.jpg"
-              alt="Mr Deadman Makes Logo"
+              src="./assets/logos/site-logo.png"
+              alt="A Creators Shop Logo"
             />
           </a>
           <ul class="nav__list">
@@ -73,17 +74,24 @@
         />
       </section>
       <section class="about">
-        <h2 id="about" class="about__title">About</h2>
-        <article class="about__card">
-          <p>
-            This is my personal page on A Creators Shop.
-            <br />
-            This section would describe my origin, skills and hopes for the
-            future
-          </p>
+        <article class="about__heading">
+          <div class="">
+            <h2 id="about" class="about__title">About</h2>
+            <p>
+              This is my personal page on A Creators Shop.
+              <br />
+              This section would describe my origin, skills and hopes for the
+              future
+            </p>
+          </div>
+          <img
+            class="about__img"
+            src="./assets/logos/mdm-logo.jpg"
+            alt="user img"
+          />
         </article>
         <article class="about__card">
-          <h3 class="about__heading-sub">Origin</h3>
+          <h3 class="about__subtitle">Origin</h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             commodo nec orci sed finibus. Fusce vitae commodo justo. Fusce
@@ -99,7 +107,7 @@
           </p>
         </article>
         <article class="about__card">
-          <h3 class="about__heading-sub">Skills</h3>
+          <h3 class="about__subtitle">Skills</h3>
           <p>
             Aliquam laoreet euismod diam, non eleifend tellus. Aenean quis
             imperdiet metus. Aenean fringilla, velit at elementum imperdiet,
@@ -112,7 +120,7 @@
           </p>
         </article>
         <article class="about__card">
-          <h3 class="about__heading-sub">Hopes / future progression</h3>
+          <h3 class="about__subtitle">Hopes / future progression</h3>
           <p>
             Aliquam mollis massa a metus condimentum, ut commodo purus ornare.
             Etiam commodo dictum lorem, a hendrerit elit maximus ut. Nam ut odio
@@ -129,36 +137,34 @@
         </article>
       </section>
 
-      <section id="gallery" class="gallery">
-        <h2 class="gallery__title">Gallery</h2>
-        <!-- <div class="slider">
-          <div class="slider__imgs">
-            <img class="slider__img" src="./assets/images/img1.jpg" />
-          </div>
-        </div> -->
-        <ul class="gallery__list">
-          <li class="gallery__list-item">
-            <img
-              class="gallery__img"
-              src="./assets/images/img1.jpg"
-              alt="Big penguin"
-            />
-          </li>
-          <li class="gallery__list-item">
-            <img
-              class="gallery__img"
-              src="./assets/images/img2.jpg"
-              alt="Border Colly"
-            />
-          </li>
-          <li class="gallery__list-item">
-            <img
-              class="gallery__img"
-              src="./assets/images/img3.jpg"
-              alt="big chicken and small chicken"
-            />
-          </li>
-        </ul>
+      <section id="gallery" class="gallery__background">
+        <article class="gallery">
+          <h2 class="gallery__title">Gallery</h2>
+          <div class="slider"></div>
+          <ul class="gallery__list">
+            <li class="gallery__list-item">
+              <img
+                class="gallery__img"
+                src="./assets/images/img1.jpg"
+                alt="Big penguin"
+              />
+            </li>
+            <li class="gallery__list-item">
+              <img
+                class="gallery__img"
+                src="./assets/images/img2.jpg"
+                alt="Border Colly"
+              />
+            </li>
+            <li class="gallery__list-item">
+              <img
+                class="gallery__img"
+                src="./assets/images/img3.jpg"
+                alt="big chicken and small chicken"
+              />
+            </li>
+          </ul>
+        </article>
       </section>
       <section id="shop">
         <h2 class="shop__title">Shop</h2>
@@ -166,36 +172,157 @@
           <article class="product">
             <img class="product__img" src="./assets/images/img11.jpg" alt="" />
             <div class="product__text-area">
-              <h3 class="product__title"></h3>
-              <p class="product__quantity"></p>
-              <p class="product__price"></p>
-              <button class="product__button">Add to Cart</button>
-            </div>
+              <h3 class="product__title">Italian Hands</h3>
+              <p class="product__desc">A Medium detail 3d printed product</p>
+              <div class="product__row">
+                <label for="QuantitySelector" class="product__quantity">
+                  Amount :
+                </label>
+                <input
+                  class="product__quantity"
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="0"
+                  min="1"
+                  max="5"
+                />
+              </div>
+              <div class="product__row">
+                <p class="product__price">£7.99</p>
+                <button class="product__button">Add to Cart</button>
+              </div>
           </article>
           <article class="product">
             <img class="product__img" src="./assets/images/img15.jpg" alt="" />
             <div class="product__text-area">
-              <h3 class="product__title"></h3>
-              <p class="product__quantity"></p>
-              <p class="product__price"></p>
-              <button class="product__button">Add to Cart</button>
+              <h3 class="product__title">Nazgul Figure</h3>
+              <p class="product__desc">A High detail 3d printed product</p>
+              <div class="product__row">
+                <label for="QuantitySelector" class="product__quantity">
+                  Amount :
+                </label>
+                <input
+                  class="product__quantity"
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="0"
+                  min="1"
+                  max="5"
+                />
+              </div>
+              <div class="product__row">
+                <p class="product__price">£7.99</p>
+                <button class="product__button">Add to Cart</button>
+              </div>
             </div>
           </article>
           <article class="product">
             <img class="product__img" src="./assets/images/img23.jpg" alt="" />
             <div class="product__text-area">
-              <h3 class="product__title"></h3>
-              <p class="product__quantity"></p>
-              <p class="product__price"></p>
-              <button class="product__button">Add to Cart</button>
+              <h3 class="product__title">Three Tailed Fox</h3>
+              <p class="product__desc">A High detail 3d printed product</p>
+              <div class="product__row">
+                <label for="QuantitySelector" class="product__quantity">
+                  Amount :
+                </label>
+                <input
+                  class="product__quantity"
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="0"
+                  min="1"
+                  max="5"
+                />
+              </div>
+              <div class="product__row">
+                <p class="product__price">£7.99</p>
+                <button class="product__button">Add to Cart</button>
+              </div>
             </div>
           </article>
         </div>
       </section>
     </main>
-    <footer>
-      <p>Contact</p>
-      <p>Socials</p>
+    <footer class="footer">
+      <div class="footer__internal-container">
+        <section class="footer__contact">
+          <h2 class="footer__heading">Contact</h2>
+          <address class="footer__card">
+            <div class="footer__card-header">
+              <h3>Liam Miller</h3>
+              <p>MrDeadManMakes</p>
+            </div>
+            <div class="footer__card-details">
+              <p>64 Zoo Lane</p>
+              <a class="footer__card-contact" href="07177777777">07177777777</a>
+            </div>
+            <a class="footer__card-contact" href="mailto:info@thebeesknees.com"
+              >mrdeadmans.makes@gmail.com</a
+            >
+          </address>
+        </section>
+        <section class="footer__contact">
+          <h2 class="footer__heading">Social Media</h2>
+          <ul class="footer__media">
+            <li class="footer__media-item">
+              <a class="footer__link" href="https://www.instagram.com/"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/Icon-instagram.svg"
+                  alt="instagram"
+                />@mrdeadmanmakes</a
+              >
+            </li>
+            <li class="footer__media-item">
+              <a class="footer__link" href="https://en-gb.facebook.com/"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/Icon-facebook.svg"
+                  alt="facebook"
+                />
+                @mrdeadmanmakes</a
+              >
+            </li>
+            <li class="footer__media-item">
+              <a class="footer__link" href="https://twitter.com/"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/Icon-twitter.svg"
+                  alt="twitter"
+                />@mrdeadmanmakes</a
+              >
+            </li>
+            <li class="footer__media-item">
+              <a class="footer__link" href="https://linktr.ee/mrdeadmanmakes"
+                ><img
+                  class="footer__icon"
+                  src="./assets/icons/SVG/icon-linktree.png"
+                  alt="twitter"
+                />@mrdeadmanmakes</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="footer__rights">
+        <img
+          class="footer__img"
+          src="./assets/logos/mdm-logo.jpg"
+          alt="bandsite Logo"
+        />
+        <p class="footer__copyright">
+          Copyright MrDeadManMakes © 2021 All Rights Reserved
+        </p>
+        <img
+          class="footer__img"
+          src="./assets/logos/site-logo.png"
+          alt="A Creators Shop Logo"
+        />
+      </section>
     </footer>
   </body>
 </html>

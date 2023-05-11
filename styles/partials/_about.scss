@@ -18,6 +18,11 @@
     padding: 1rem;
   }
 
+  &__heading {
+    @include flex();
+    align-items: center;
+  }
+
   &__title {
     text-decoration: underline;
 
@@ -29,23 +34,15 @@
   }
 
   &__img {
-    width: 100%;
-
-    @include media-tablet {
-      width: 85%;
-      margin-bottom: 2rem;
-    }
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
   }
 
-  &__heading-sub {
+  &__subtitle {
     margin: 1rem 0;
-    font-size: 2.5rem;
-  }
-
-  &__content {
-    @include media-tablet {
-      width: 85%;
-    }
+    font-size: 1.75rem;
+    text-decoration: underline;
   }
 
   &__card {
