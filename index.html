@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Creators Shop - MDM</title>
     <link rel="stylesheet" href="./css/home.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
     <link
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
       rel="stylesheet"
@@ -21,7 +22,8 @@
       defer
     ></script>
 
-    <script src="index.js" defer></script>
+    <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/store.js" defer></script>
   </head>
   <body>
     <header>
@@ -38,12 +40,7 @@
             <li class="nav__item">
               <a class="nav__link" href="/">Home</a>
             </li>
-            <li class="nav__item">
-              <a class="nav__link" href="/">Gallery</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="/">Shop</a>
-            </li>
+
             <li class="nav__item">
               <input
                 class="nav__item--search"
@@ -75,7 +72,7 @@
               <a class="nav__link" href="#gallery">Gallery</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#shop">Shop</a>
+              <a class="nav__link" href="#shop">Products</a>
             </li>
           </ul>
         </div>
@@ -151,7 +148,7 @@
         </article>
       </section>
       <section class="splide" aria-label="Splide Basic HTML Example">
-        <h2 class="gallery__title">Gallery - Dynamic</h2>
+        <h2 id="gallery" class="gallery__title">Gallery</h2>
         <div class="splide__track">
           <ul class="splide__list">
             <li class="splide__slide">
@@ -172,48 +169,93 @@
             <li class="splide__slide">
               <img src="./assets/images/img6.jpg" />
             </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img7.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img8.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img9.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img10.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img11.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img12.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img13.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img14.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img15.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img16.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img17.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img18.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img19.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img20.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img21.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img22.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img23.jpg" />
+            </li>
           </ul>
         </div>
       </section>
-      <section id="gallery" class="gallery__background">
-        <article class="gallery">
-          <h2 class="gallery__title">Gallery - static</h2>
-          <div class="slider"></div>
-          <ul class="gallery__list">
-            <li class="gallery__list-item">
-              <img
-                class="gallery__img"
-                src="./assets/images/img1.jpg"
-                alt="Big penguin"
-              />
-            </li>
-            <li class="gallery__list-item">
-              <img
-                class="gallery__img"
-                src="./assets/images/img2.jpg"
-                alt="Border Colly"
-              />
-            </li>
-            <li class="gallery__list-item">
-              <img
-                class="gallery__img"
-                src="./assets/images/img3.jpg"
-                alt="big chicken and small chicken"
-              />
-            </li>
-          </ul>
-        </article>
-      </section>
       <section id="shop">
-        <h2 class="shop__title">Shop</h2>
+        <h2 class="shop__title">Products</h2>
         <div class="shop__area">
-          <article class="product">
+          <!--  <article class="product">
+            <img class="product__img" src="" alt="" />
+            <div class="product__text-area">
+              <h3 class="product__title"></h3>
+              <p class="product__desc"></p>
+              <div class="product__row">
+                <label for="quantity" class="product__quantity"></label>
+                <input
+                  class="product__quantity"
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="0"
+                  min="1"
+                  max="5"
+                />
+              </div>
+              <div class="product__row">
+                <p class="product__price"></p>
+                <button class="product__button"></button>
+              </div>
+            </div>
+          </article>;  -->
+          <!-- <article class="product">
             <img class="product__img" src="./assets/images/img11.jpg" alt="" />
             <div class="product__text-area">
               <h3 class="product__title">Italian Hands</h3>
               <p class="product__desc">A Medium detail 3d printed product</p>
               <div class="product__row">
-                <label for="QuantitySelector" class="product__quantity">
+                <label for="quantity" class="product__quantity">
                   Amount :
                 </label>
                 <input
@@ -238,7 +280,7 @@
               <h3 class="product__title">Nazgul Figure</h3>
               <p class="product__desc">A High detail 3d printed product</p>
               <div class="product__row">
-                <label for="QuantitySelector" class="product__quantity">
+                <label for="quantity" class="product__quantity">
                   Amount :
                 </label>
                 <input
@@ -263,7 +305,7 @@
               <h3 class="product__title">Three Tailed Fox</h3>
               <p class="product__desc">A High detail 3d printed product</p>
               <div class="product__row">
-                <label for="QuantitySelector" class="product__quantity">
+                <label for="quantity" class="product__quantity">
                   Amount :
                 </label>
                 <input
@@ -281,7 +323,7 @@
                 <button class="product__button">Add to Cart</button>
               </div>
             </div>
-          </article>
+          </article> -->
         </div>
       </section>
     </main>

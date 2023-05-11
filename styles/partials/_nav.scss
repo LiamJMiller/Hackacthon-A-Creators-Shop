@@ -26,8 +26,12 @@
 
   &__list {
     @include flex(row, space-around);
+
     list-style: none;
     width: 100%;
+    @include media-tablet {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
