@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Creators Shop - MDM</title>
     <link rel="stylesheet" href="./css/home.css" />
-    <script src="index.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"
+      defer
+    ></script>
+    <script
+      src="
+    https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js
+    "
+      defer
+    ></script>
 
+    <script src="index.js" defer></script>
   </head>
   <body>
     <header>
@@ -136,10 +150,34 @@
           </p>
         </article>
       </section>
-
+      <section class="splide" aria-label="Splide Basic HTML Example">
+        <h2 class="gallery__title">Gallery - Dynamic</h2>
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="./assets/images/img1.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img2.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img3.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img4.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img5.jpg" />
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/images/img6.jpg" />
+            </li>
+          </ul>
+        </div>
+      </section>
       <section id="gallery" class="gallery__background">
         <article class="gallery">
-          <h2 class="gallery__title">Gallery</h2>
+          <h2 class="gallery__title">Gallery - static</h2>
           <div class="slider"></div>
           <ul class="gallery__list">
             <li class="gallery__list-item">
@@ -192,6 +230,7 @@
                 <p class="product__price">£7.99</p>
                 <button class="product__button">Add to Cart</button>
               </div>
+            </div>
           </article>
           <article class="product">
             <img class="product__img" src="./assets/images/img15.jpg" alt="" />
