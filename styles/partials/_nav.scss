@@ -50,6 +50,7 @@
       width: 6rem;
       @include media-tablet {
         width: auto;
+        flex-grow: 2;
       }
     }
   }

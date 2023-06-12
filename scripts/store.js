@@ -68,6 +68,8 @@ axios.get(STORE_API).then((response) => {
       "product__quantity"
     );
     productQuantity.type = "number";
+    productQuantity.min = "1";
+    productQuantity.value = "0";
 
     const productRowEl2 = addElement(
       "div",

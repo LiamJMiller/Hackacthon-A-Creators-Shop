@@ -80,6 +80,7 @@ ul {
 @media (min-width: 768px) {
   .nav__item--search {
     width: auto;
+    flex-grow: 2;
   }
 }
 .nav__img {
